@@ -15,10 +15,6 @@ io.set('log level', 1);
 var usrtab = {}
 
 io.sockets.on('connection', function (socket) {
-    
-
-	var ID = (socket.id).toString().substr(0, 5);
-	var time = (new Date).toLocaleTimeString();
 
 	socket.on('new_user', function (msg) {
 		usrtab[socket.id.toString()] = msg
